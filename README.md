@@ -29,6 +29,26 @@ Here is how your updated architecture will look like upon competition of this pr
 
 ![Project9 updated architecture](Images/image-1.png)
 
+Install and Configure Jenkins server
+Step 1 – Install Jenkins server
+1. Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it “Jenkins”
+2. Install JDK (since Jenkins is a Java-based application)
+
+sudo apt update
+sudo apt install default-jdk-headless
+3. Install Jenkins
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+sudo systemctl status jenkins
+![Jenkins status](<Jenkins status.PNG>)
+
+
 
 
 
