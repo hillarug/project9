@@ -27,6 +27,9 @@ Enhance the architecture prepared in Project 8 by adding a Jenkins server, confi
 Here is how your updated architecture will look like upon competition of this project
 
 
-![Alt text](./README.md) 
+![Ci/cd tooling](./image.png)
+
+
+
 
 
