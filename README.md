@@ -48,6 +48,24 @@ sudo apt-get install jenkins
 sudo systemctl status jenkins
 ![Jenkins status](<Jenkins status.PNG>)
 
+By default Jenkins server uses TCP port 8080 – open it by creating a new Inbound Rule in your EC2 Security Group
+
+![Port 8080](<Port 8080.PNG>)
+ 
+4. Perform initial Jenkins setup.
+
+From your browser access http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080
+
+You will be prompted to provide a default admin password
+
+13.53.124.55:8080
+![Unlock Jenkins](<Unlock Jenkins.PNG>)
+
+ubuntu@ip-172-31-27-69:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+7125e8a3cf0d45f885744d52babcff9e
+![Customize Jenkins](<Images/Customize Jenkins.PNG>)
+
+
 
 
 
