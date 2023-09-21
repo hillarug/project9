@@ -28,6 +28,7 @@ Here is how your updated architecture will look like upon competition of this pr
 
 
 ![Ci/cd tooling](./image.png)
+![ci/cd integration](Images/image-1.png)
 
 
 
