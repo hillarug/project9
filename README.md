@@ -65,6 +65,26 @@ ubuntu@ip-172-31-27-69:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 7125e8a3cf0d45f885744d52babcff9e
 ![Customize Jenkins](<Images/Customize Jenkins.PNG>)
 
+![Welcome to Jenkins](image.png)
+
+So, this is the Jenkins dashboard.
+
+Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
+
+In this part, you will learn how to configure a simple Jenkins job/project (these two terms can be used interchangeably). This job will will be triggered by GitHub webhooks and will execute a ‘build’ task to retrieve codes from GitHub and store it locally on Jenkins server.
+1. Enable webhooks in your GitHub repository settings
+![webhooks](Webhooks.PNG)
+
+2. Go to Jenkins web console, click “New Item”  create a “Freestyle project” and ok it
+To connect your GitHub repository, you will need to provide its URL, you can copy from the repository itself
+
+
+
+
+
+
+
+
 
 
 
