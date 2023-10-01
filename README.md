@@ -76,7 +76,12 @@ In this part, you will learn how to configure a simple Jenkins job/project (thes
 ![webhooks](Webhooks.PNG)
 
 2. Go to Jenkins web console, click “New Item”  create a “Freestyle project” and ok it
-To connect your GitHub repository, you will need to provide its URL, you can copy from the repository itself
+To connect your GitHub repository, you will need to provide its URL, you can copy from the stooling repository itself.
+![Configure Jenkins](image-1.png)
+![Build Jenkins](image-2.png)
+![Console Output](image-3.png)
+
+
 
 
 
