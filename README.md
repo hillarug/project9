@@ -83,6 +83,7 @@ To connect your GitHub repository, you will need to provide its URL, you can cop
 
 Click "Configure" your job/project and add these two configurations. Configure triggering the job from the GitHub
 ![Configure triggering the job from the GitHub](Configure triggering the job from the GitHub)
+Checking Jenkins
 
 
 
