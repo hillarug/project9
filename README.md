@@ -27,7 +27,7 @@ Enhance the architecture prepared in Project 8 by adding a Jenkins server, confi
 Here is how your updated architecture will look like upon competition of this project
 
 
-![Project9 updated architecture](Images/image-1.png)
+![Project9 updated architecture](./Images/)
 
 Install and Configure Jenkins server
 Step 1 – Install Jenkins server
@@ -112,11 +112,11 @@ Save the configuration, open your Jenkins job/project configuration page and add
 Save this configuration and go ahead, and change something in README.MD file in your GitHub Tooling repository. Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:
 
 Finished: SUCCESS
-![Console out](image-9.png)
+![Console out](./README.md)
 
 To make sure that the files in /mnt/apps have been updated – connect via SSH/Putty to your NFS server and check README.MD file cat /mnt/apps/README.md. I used the grep command to filter the exact text with which I updated the README.md file.
 
-Testing
+
 
 
 
