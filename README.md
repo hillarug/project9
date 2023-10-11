@@ -25,9 +25,7 @@ Task
 Enhance the architecture prepared in Project 8 by adding a Jenkins server, configure a job to automatically deploy source codes changes from Git to NFS server.
 
 Here is how your updated architecture will look like upon competition of this project
-
-
-![Project9 updated architecture](./Images/)
+![Console out](Images/image-9.png)
 
 Install and Configure Jenkins server
 Step 1 – Install Jenkins server
