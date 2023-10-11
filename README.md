@@ -65,6 +65,10 @@ ubuntu@ip-172-31-27-69:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 7125e8a3cf0d45f88574m4d52babcff9e
 ![Customize Jenkins](<Images/Customize Jenkins.PNG>)
 
+![Creat First Admin](image-3.png)
+
+![Jenkins is ready](image-4.png)
+
 ![Welcome to Jenkins](image.png)
 
 So, this is the Jenkins dashboard.
