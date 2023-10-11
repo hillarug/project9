@@ -103,11 +103,11 @@ Arbitrary name
 Hostname – can be private IP address of your NFS server
 Username – ec2-user (since the NFS server is based on EC2 with RHEL 8)
 Remote directory – /mnt/apps since our Web Servers use it as a mounting point to retrieve files from the NFS server Test the configuration and make sure the connection returns Success. Remember, that TCP port 22 on NFS server must be open to receive SSH connections.
+![Publish Over SSH ](Images/image-7.png)
 
-![Publish over SSH](image-7.png)
 
 Save the configuration, open your Jenkins job/project configuration page and add another one "Post-build Action"
-![Post buid action](image-8.png)
+![Post build action](Images/image-8.png)
 
 Save this configuration and go ahead, and change something in README.MD file in your GitHub Tooling repository. Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:
 
