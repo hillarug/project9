@@ -79,27 +79,34 @@ In this part, you will learn how to configure a simple Jenkins job/project (thes
 1. Enable webhooks in your GitHub repository settings
 ![Webhook](Images/Webhooks.PNG)
 
-2. Go to Jenkins web console, click “New Item”  create a “Freestyle project” and ok it
-To connect your GitHub repository, you will need to provide its URL, you can copy from the stooling repository itself.
-![Configure Jenins](Images/image-4.png)
-!![Build jenkins](Images/image-5.png)
-![Jenkins Plug in](Images/image-6.png)
+![tooling_project7](image-6.png)
 
-![Publis Over SSH](Images/image-7.png)
+![HTTP ERROR](image-7.png)
 
-![Jenkins buid continues](Images/image-7.png)
+![Enable proxy compatibility](image-8.png)
 
-![Console out](Images/image-9.png)
+
+![Source code management](image-9.png)
+
+Save the configuration and let us try to run the build. For now, we can only do it manually. Click the "Build Now" button, if you have configured everything correctly, the build will be successful and you will see it under #1.
+
+![Build now](image-10.png)
+
+You can open the build and check in "Console Output" if it has run successfully. If so – congratulations! You have just made your very first Jenkins build! But this build does not produce anything and it runs only when we trigger it manually. Let us fix it.
+
+![Console out](Images/image-3.png)
 
 Click "Configure" your job/project and add these two configurations. Configure triggering the job from the GitHub
-![Configure triggering the job from the GitHub](Configure triggering the job from the GitHub)
+![Build triggers](image-12.png)
 
 Configure "Post-build Actions" to archive all the files – files resulting from a build are called "artifacts".
-![Build steps](Build steps)
+![Build steps](image-13.png)
 
-Now, go ahead and make some changes in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch. You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on the Jenkins server
-![Automated Jenkins job](image-5.png)
-An automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and file transfer is initiated by GitHub). There are also other methods: trigger one job (downstream) from another (upstream), poll GitHub periodically and others. By default, the artifacts are stored on the Jenkins server locally.
+Now, go ahead and make some changes in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch. You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on the Jenkins server.
+![Status](image-14.png)
+
+You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and file transfer is initiated by GitHub). There are also other methods: trigger one job (downstream) from another (upstream), poll GitHub periodically and others. By default, the artifacts are stored on the Jenkins server locally.
+ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/
 
 Step 3 – Configure Jenkins to copy files to NFS server via SSH.
 Now we have our artifacts saved locally on Jenkins server, the next step is to copy them to our NFS server to /mnt/apps directory. Jenkins is a highly extendable application and there are 1400+ plugins available. We will need a plugin that is called "Publish Over SSH".
@@ -122,7 +129,7 @@ Save the configuration, open your Jenkins job/project configuration page and add
 Save this configuration and go ahead, and change something in README.MD file in your GitHub Tooling repository. Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:
 
 Finished: SUCCESS
-![Console out](./README.md)
+![Console out](image-15.png)
 
 To make sure that the files in /mnt/apps have been updated – connect via SSH/Putty to your NFS server and check README.MD file cat /mnt/apps/README.md. I used the grep command to filter the exact text with which I updated the README.md file.
 
